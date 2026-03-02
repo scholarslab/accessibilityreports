@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+{% assign report-data = site.data.[page.datafile]%}
+<p><strong>{{ report-data.errors }}</strong> Errors</p>
+<ul>
+{% for result in report-data.results %}
+<li>
+    <b>{{ result | first }}</b><br>
+    {% assign errors = result | last %}
+    {% for error in errors %}
+    <i>{{ error.code }}</i><br>
+    <p>{{ error.message }}<br>
+    <b>{{ error.selector }}</b></p>
+    {% endfor %}
+</li>
+{% endfor %}
+</ul>
