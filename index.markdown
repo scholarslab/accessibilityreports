@@ -5,8 +5,6 @@
 layout: home
 ---
 
-## Available Reports
-
 * [Connection Established](connection.html)
 * [Faulkner](faulkner.html)
 * [Praxis](praxis.html)
