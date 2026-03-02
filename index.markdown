@@ -9,4 +9,5 @@ layout: home
 * [Faulkner](faulkner.html)
 * [Praxis](praxis.html)
 * [Salem](salem.html)
+* [Scholars’ Lab](scholarslab.html)
 * [Twain](twain.html)
