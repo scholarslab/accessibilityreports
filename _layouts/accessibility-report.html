@@ -6,14 +6,18 @@ layout: default
 <p><strong>{{ report-data.errors }}</strong> Errors</p>
 <ul>
 {% for result in report-data.results %}
+    {% assign page_url = result | first %}
+    {% assign page_errors = result | last %}
+    {% if page_errors != empty %}
 <li>
-    <b>{{ result | first }}</b><br>
-    {% assign errors = result | last %}
-    {% for error in errors %}
+    <b>{{ page_url }}</b><br>
+    {% for error in page_errors %}
     <i>{{ error.code }}</i><br>
     <p>{{ error.message }}<br>
     <b>{{ error.selector }}</b></p>
     {% endfor %}
 </li>
+{% endif %}
+
 {% endfor %}
 </ul>
